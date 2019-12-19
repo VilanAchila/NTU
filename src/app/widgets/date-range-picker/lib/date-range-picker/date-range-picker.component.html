@@ -1,0 +1,13 @@
+<div class="input-group">
+  <input ngbDatepicker [placement]="position"  #dp="ngbDatepicker" type="text" class="form-control-sm date-picker-input" readonly
+    [disabled]="disabled" [autoClose]="false" [displayMonths]="1" [dayTemplate]="t" [showWeekNumbers]="false"
+    [markDisabled]="isDisabled" [firstDayOfWeek]="7" (click)="dp.toggle()" (dateSelect)="onDateChange($event, dp)">
+</div>
+
+<ng-template #t let-date="date" let-focused="focused" let-disabled="disabled">
+  <span class="custom-day" [class.focused]="focused" [class.range]="isFrom(date) || isTo(date) || isInside(date) || isHovered(date)"
+    [class.faded]="isHovered(date) || isInside(date)" [class.weekend]="isWeekend(date)" [class.disabled]="disabled"
+    (mouseenter)="hoveredDate = date" (mouseleave)="hoveredDate = null">
+    {{ date.day }}
+  </span>
+</ng-template>

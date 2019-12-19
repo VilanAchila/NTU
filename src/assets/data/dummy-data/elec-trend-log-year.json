@@ -1,0 +1,38 @@
+{
+    "chart": {
+      "caption": "",
+      "subCaption": "",
+      "xAxisName": "Months Of 2019",
+      "yAxisName": "Energy Consumption (kWh)",
+      "baseFont": "Poppins",
+      "bgColor": "#ffffff",
+      "bgAlpha": 0,
+      "canvasBgColor": "#ffffff",
+      "canvasBgAlpha": 0,
+      "baseFontColor": "#ffffff",
+      "baseFontSize": 13,
+      "theme": "carbon",
+      "xAxisNameFontColor": "#ffffff",
+      "xAxisNameFontSize": 13,
+      "xAxisNameFontBold": false,
+      "yAxisNameFontColor": "#ffffff",
+      "yAxisNameFontSize": 13,
+      "yAxisNameFontBold": false,
+      "palettecolors": "#007bff",
+      "plotToolText": "Consumption of $label - $value kWh"
+    },
+    "data": [
+      { "label": "Jan", "value": null },
+      { "label": "Feb", "value": null },
+      { "label": "Mar", "value": null },
+      { "label": "Apr", "value": null },
+      { "label": "May", "value": null },
+      { "label": "Jun", "value": null },
+      { "label": "Jul", "value": null },
+      { "label": "Aug", "value": null },
+      { "label": "Sep", "value": null },
+      { "label": "Oct", "value": null },
+      { "label": "Nov", "value": null },
+      { "label": "Dec", "value": null }
+    ]
+  }

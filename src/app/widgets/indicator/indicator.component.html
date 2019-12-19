@@ -1,0 +1,13 @@
+<div class="indi-container d-flex justify-content-center flex-column align-items-center h-100 text-center">
+    <div class="value mb-3">
+        <img *ngIf="isIncreased" src="assets/img/indi-up.svg" alt="Increased" class="indi-img">
+        <img *ngIf="!isIncreased" src="assets/img/indi-down.svg" alt="Increased" class="indi-img">
+        <span [classList]="isIncreased ? 'danger' : 'neutral'">{{ percentile | number: '1.2-2'}}%</span>
+    </div>
+    <span [ngClass]="{'sub-value': true, 'danger': isIncreased, 'neutral': !isIncreased}">
+        {{ diffValue | number }}
+        <span [ngClass]="{'sub-value': true, 'danger': isIncreased, 'neutral': !isIncreased}" [innerHTML]="unit"></span>
+    </span>
+    
+    <div class="w-100 text-center p-2">{{ isIncreased ? 'Increase' : 'Decrease' }} {{ text }}</div>
+</div>

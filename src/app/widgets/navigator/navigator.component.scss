@@ -1,0 +1,34 @@
+@import 'src/scss/_variables.scss';
+
+.item{
+    border-left: 2px solid $color-border-primary;
+}
+
+.item:hover{
+    background-color: $bg-opt-two;
+    border-left: 2px solid $bg-primary;
+}
+
+.top-level{
+    padding-left: 0rem;
+    background-color: $bg-opt-one;
+}
+
+.second-level{
+    padding-left: 2.5rem;
+}
+
+.third-level{
+    padding-left: 4.5rem;
+}
+
+.active-item {
+  cursor: pointer;
+  background-color: $bg-opt-two;
+  border-left: 4px solid $bg-primary;
+  border-bottom: 1px solid #536b7c;
+}
+
+.active-item:hover {
+  border-left: 8px solid $bg-primary;
+}

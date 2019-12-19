@@ -1,0 +1,41 @@
+@import 'src/scss/_variables.scss';
+
+ul.menu{
+    list-style-type: none;
+    padding-inline-start: 0px;
+    position: relative;
+
+    li {
+        ul {
+            list-style-type: none;
+            padding-inline-start: 0px;
+        }
+    }
+}
+
+.menu-item{
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+.menu-item:hover{
+    cursor: pointer;
+    background-color: $bg-opt-four;
+}
+
+.menu-item.active{
+    background-color: $bg-opt-four;
+}
+
+.footer-version {
+  font-size: 12px;
+  color: #314554;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.footer-version:hover {
+  color: #435e72;
+}

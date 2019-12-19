@@ -1,0 +1,255 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'src/scss/_variables.scss';
+
+html, body{
+  height: 100%;
+}
+
+:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+body{
+  font-family: Poppins !important;
+  background-color: $bg-color !important;
+  color: $font-color !important;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.btn{
+  font-size: $size-font-primary !important;
+}
+
+.btn:focus{
+  box-shadow: 0 0 0 0rem rgba(0, 0, 0, 0) !important;
+}
+
+.btn-primary{
+  background-color: rgba(0,0,0,0) !important;
+}
+
+.btn-primary.active{
+  background-color: $bg-primary !important;
+  border-color: $bg-primary !important;
+}
+
+.fill-content{
+  height: calc(100% - #{$header-height});
+}
+
+.card{
+  background-color: $bg-card !important;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+.tab-primary{
+  text-decoration: none;
+  color: $color-font-secondary;
+  padding: 1rem 2rem 1rem 2rem;
+  border-bottom: 2px solid rgba(0,0,0,0);
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.tab-primary:hover, .tab-primary.active{
+  color: $bg-primary;
+  border-bottom: 2px solid $bg-primary;
+}
+
+.font-primary{
+  font-size: $size-font-primary;
+}
+
+.font-secondary{
+  font-size: $size-font-secondary;
+}
+
+.chart-card{
+  background-color: $bg-secondary;
+  border-radius: 3px;
+  overflow: hidden;
+
+  .chart-card-header{
+    background-color: $bg-opt-one;
+    font-size: $size-font-primary;
+    padding: 0.9rem 1.5rem 0.9rem 1.5rem;
+
+    .date-picker{
+      cursor: pointer;
+      color: $color-font-ternary;
+      transition: all ease-in-out 0.3s;
+    }
+
+    .date-picker:hover{
+      color: $font-color;
+    }
+
+    .btn-group{
+      margin-top: -0.4rem;
+
+      .btn{
+        font-size: $size-font-header-btn !important;
+      }
+    }
+  }
+
+  .chart-card-body{
+    height: calc(100% - #{$height-chart-header});
+    overflow: hidden;
+  }
+}
+
+.fusioncharts-container{
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+
+  svg{
+    background-color: rgba(0,0,0,0) !important;
+  }
+}
+
+.cal-height{
+  height: calc(100% - 4rem);
+}
+
+.lg-topic{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: $size-font-large;
+  font-weight: 400;
+
+  small{
+    font-size: $size-font-secondary;
+  }
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+.row{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.fluid-margin{
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+}
+
+.auto-margin{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+fusioncharts > div:first-child {
+  display: flex;
+}
+
+.mt-0-6{
+  margin-top: 0.6rem;
+}
+
+.res-avg{
+  width: 100%;
+  height: auto;
+}
+
+.no-list-style{
+  list-style-type: none;
+}
+
+select {
+  background-color: $bg-card;
+  padding: 0.3rem 1rem 0.3rem 1rem ;
+  color: $font-color;
+  border-radius: 3px;
+  border: 1px solid $bg-primary;
+}
+
+table {
+  tbody{
+    tr {
+      td {
+        vertical-align: middle !important;
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar:hover {
+  width: 30px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #8d8d8d;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(29, 39, 46, 0.8);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(29, 39, 46);
+}
+
+.card-scroll {
+  min-height: 80vh;
+  max-height: 100vh - 75;
+  overflow-y: auto
+}
+
+.loader-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.modal-content {
+  margin: 20px 0 0 0;
+}
+
+html,body, .app-panel {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.main-card-height {
+  height: calc(100vh - 70px);
+}
+
+.styled-select-box{
+  background-color: #2f4251;
+  color: #FFFFFF;
+}
+
+.styled-select-box{
+  background-color: #2f4251 !important;
+  border: none !important;
+  color: #FFFFFF !important;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.pie-chart-min-height {
+  min-height: 350px;
+}
+
+.toggle-middle-head {
+  margin-top: -2px;
+}

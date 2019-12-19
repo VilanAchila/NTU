@@ -1,0 +1,44 @@
+<app-modal titleText="Locations">
+  <div class="row" >
+    <div class="col-md-12 col-lg-12 col-xl-12 p-0">
+
+      <section *ngIf="boardLevel == 0">
+        <div *ngFor="let site of datasourse" >
+          <div class="top-level pt-2 pb-2 pl-3 item clickable" (click)="navigateToSite('/site-electrical')">{{ site.siteName }}</div>
+          <section *ngFor="let category of site.siteCategories; let i = index">
+            <div (click)="expandCallpse(i)" class="second-level pt-2 pb-2 active-item item container">
+              {{ category.categoryName }}
+              <fa-icon class="browse fa-lg ml-3 float-right" [icon]="callapse[i]?arrowUp:arrowDown"></fa-icon>
+            </div>
+            <div *ngIf="callapse[i]">
+              <div
+                (click)="navigateToUrl('/electrical/'+building.buildingID, building.buildingID, building.buildingName)"
+                *ngFor="let building of category.buildingList"
+                class="third-level pt-2 pb-2 item clickable">{{ building.buildingName }}</div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section *ngIf="boardLevel == 1">
+        <div *ngFor="let site of datasourse" >
+          <div class="top-level pt-2 pb-2 pl-3 item clickable" (click)="navigateToSite('/site-water')">{{ site.siteName }}</div>
+          <section *ngFor="let category of site.siteCategories; let i = index">
+            <div (click)="expandCallpse(i)" class="second-level pt-2 pb-2 active-item item container">
+              <span>{{ category.categoryName }}</span>
+              <fa-icon class="browse fa-lg ml-3 float-right" [icon]="callapse[i]?arrowUp:arrowDown"></fa-icon>
+            </div>
+            <div *ngIf="callapse[i]">
+              <div
+                (click)="navigateToUrl('/water/'+building.buildingID, building.buildingID, building.buildingName)"
+                *ngFor="let building of category.buildingList" class="third-level pt-2 pb-2 item clickable">
+                {{ building.buildingName }}
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</app-modal>

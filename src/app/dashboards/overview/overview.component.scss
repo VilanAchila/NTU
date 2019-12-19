@@ -1,0 +1,42 @@
+@import 'src/scss/_variables.scss';
+
+.topic {
+  font-size: $size-font-mid;
+  font-weight: 500;
+
+  p {
+    font-size: $size-font-primary;
+    font-weight: 400;
+  }
+
+  .text-elec {
+    color: $font-warning;
+  }
+
+  .text-water {
+    color: $bg-primary;
+  }
+
+  small {
+    font-size: $size-font-header-btn;
+  }
+
+  .time {
+    font-size: $size-font-low;
+    font-weight: 300;
+  }
+}
+
+.card-scroll {
+  min-height: 90vh;
+  max-height: 90vh;
+}
+
+.unit-size{
+  font-size: 1.4rem;
+}
+
+.column-seperator {
+  border-right: 1px solid #2F4251;
+}
+

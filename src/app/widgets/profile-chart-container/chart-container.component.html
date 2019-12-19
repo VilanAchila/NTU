@@ -1,0 +1,25 @@
+<div class="row pl-0 pr-0">
+  <div class="col-md-12 col-lg-12 col-xl-12 pt-2">
+    <div>
+      <span class="float-left d-inline-block mr-3"><small>Pick a Range:</small></span>
+      <span class="float-left"><date-range-picker [(dateRange)]="dateRange" (dateRangeChange)="dateChanged($event)"></date-range-picker></span>
+    </div>
+    <div class="float-right widget-marge d-none d-xl-block">
+      <app-toggle-switch aria-disabled="true" class="float-left"><small>Benchmark</small></app-toggle-switch>
+    </div>
+    <div class="float-right widget-marge d-none d-xl-block" *ngIf="isCompare">
+      <app-toggle-switch (onChange)="onToggleChanged($event)"><small>Compare</small></app-toggle-switch>
+    </div>
+  </div>
+  <div class="col-12 pt-3 pl-2 pr-2">
+    <div class="row  pl-0 pr-0 d-xl-none">
+      <div class="col pl-0 pr-0">
+        <app-toggle-switch aria-disabled="true" class="float-left"><small>Benchmark</small></app-toggle-switch>
+      </div>
+      <div class="col pl-0 pr-0" *ngIf="isCompare">
+        <app-toggle-switch (onChange)="onToggleChanged($event)" class="float-right"><small>Compare</small></app-toggle-switch>
+      </div>
+    </div>
+    <app-grouped-trend *ngIf="dataSource" [dataSourse]="dataSource" [height]="450"></app-grouped-trend>
+  </div>
+</div>

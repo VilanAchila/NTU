@@ -1,0 +1,100 @@
+<div class="card">
+  <div class="card-header p-0">
+    <span class="d-none d-xl-block  pl-3 pt-3 pb-3 font-secondary">
+      Chiller Plant -
+      <select [(ngModel)]="chillerId" (change)="chillerChanged($event)" class="form-control-sm styled-select-box" name="plants" id="plants">
+        <option *ngFor="let chiller of chillersData" value="{{ chiller.chillerPlantID }}">{{ chiller.code }}</option>
+      </select>
+      <span class="tab-primary float-right font-primary" (click)="setTabIndex(0)" [ngClass]="{'active': tabIndex == 1}">Reports</span>
+      <span class="tab-primary float-right font-primary" (click)="setTabIndex(0)" [ngClass]="{'active': tabIndex == 0}">Overview</span>
+    </span>
+
+    <div class="d-xl-none pl-3 pt-3 pb-3 font-secondary">
+      <div class="row w-100">
+        <div class="col-8">
+          Chiller Plant -
+          <select class="form-control-sm styled-select-box" name="plants" id="plants">
+            <option *ngFor="let chiller of chillersData" value="{{ chiller.chillerPlantID }}">{{ chiller.code }}</option>
+          </select>
+        </div>
+        <div class="col-4 ">
+           <select (change)="setTabIndex($event.target.value)" [(ngModel)]="tabIndex" class="form-control form-control-sm styled-select-box">
+          <option value="0">Overview</option>
+          <option value="1">Reports</option>
+      </select>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <section *ngIf="tabIndex == 0">
+    <div class="card-body card-scroll">
+      <div class="row row-eq-height">
+        <div class="col-md-7 col-lg-7 col-xl-7 pr-1 pl-0">
+          <div class="row pl-0 mt-2">
+            <div class="col-md-12 col-lg-12 col-xl-12 pr-1 pl-0">
+              <div class="chart-card h-100">
+                <div class="chart-card-header pl-2 pr-2">
+                  Plant Efficiency - Real Time
+                </div>
+                <div class="chart-card-body">
+                  <div class="row h-100">
+                    <div class="col-md-12 col-lg-12 col-xl-12 p-2">
+                      <app-linear-scale *ngIf="plantEffieciencyDataSource" [dataSource]="plantEffieciencyDataSource" height="100"></app-linear-scale>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2 pl-0">
+            <div class="col-md-12 col-lg-12 col-xl-12 pr-1 pl-0">
+              <div class="chart-card h-100">
+                <div class="chart-card-header pl-2 pr-2">
+                  Average Heat Balance - Today
+                </div>
+                <div class="chart-card-body h-100 p-2">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-12 col-xl-12 pb-3">
+                      <app-real-time-line *ngIf="heatBalanceDataSource" [dataSource]="heatBalanceDataSource" [height]="180"></app-real-time-line>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2 pl-0">
+            <div class="col-md-12 col-lg-12 col-xl-12 pr-1 pl-0">
+              <div class="chart-card">
+                <div class="chart-card-header pl-2 pr-2">
+                  Average Efficiency Trend - Last 7 Days
+                </div>
+                <div class="chart-card-body">
+                  <div class="row p-2">
+                    <div class="col-md-12 col-lg-12 col-xl-12">
+                      <app-multi-series *ngIf="effieciencyTrendDataSource" [dataSource]="effieciencyTrendDataSource" [height]="220"></app-multi-series>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 col-lg-5 mt-2 col-xl-5 pl-0 pr-2">
+          <div class="chart-card h-100">
+            <div class="chart-card-header pl-2 pr-2">
+              <span>Energy Distribution</span>
+              <div class="float-right toggle-middle-head">
+                <app-toggle-switch aria-disabled="true" size="small" class="float-left" (onChange)="monthlyToggle($event)">{{monthlyChange?"Monthly":"Yearly"}}</app-toggle-switch>
+              </div>
+            </div>
+            <div class="chart-card-body pie-chart-min-height">
+              <app-doughnut2d *ngIf="enegeryConsumptionDataSource" [dataSource]="enegeryConsumptionDataSource"></app-doughnut2d>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

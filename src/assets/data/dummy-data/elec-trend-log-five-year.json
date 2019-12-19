@@ -1,0 +1,31 @@
+{
+    "chart": {
+      "caption": "",
+      "subCaption": "",
+      "xAxisName": "Last 5 Years",
+      "yAxisName": "Energy Consumption (kWh)",
+      "baseFont": "Poppins",
+      "bgColor": "#ffffff",
+      "bgAlpha": 0,
+      "canvasBgColor": "#ffffff",
+      "canvasBgAlpha": 0,
+      "baseFontColor": "#ffffff",
+      "baseFontSize": 13,
+      "theme": "carbon",
+      "xAxisNameFontColor": "#ffffff",
+      "xAxisNameFontSize": 13,
+      "xAxisNameFontBold": false,
+      "yAxisNameFontColor": "#ffffff",
+      "yAxisNameFontSize": 13,
+      "yAxisNameFontBold": false,
+      "palettecolors": "#007bff",
+      "plotToolText": "Consumption of $label - $value kWh"
+    },
+    "data": [
+      { "label": "2015", "value": null },
+      { "label": "2016", "value": null },
+      { "label": "2017", "value": null },
+      { "label": "2018", "value": null },
+      { "label": "2019", "value": null }
+    ]
+  }

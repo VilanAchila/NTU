@@ -1,0 +1,14 @@
+@import 'src/scss/_variables.scss';
+
+table{
+    border: 1px solid $bg-opt-one;
+    border-radius: 3px;
+    white-space:nowrap;
+}
+
+table.table-dark{
+    th{
+        background-color: $bg-opt-one;
+        font-weight: 400;
+    }
+}

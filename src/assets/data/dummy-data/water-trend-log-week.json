@@ -1,0 +1,33 @@
+{
+    "chart": {
+      "caption": "",
+      "subCaption": "",
+      "xAxisName": "Days Of Week",
+      "yAxisName": "Water Consumption (m3)",
+      "baseFont": "Poppins",
+      "bgColor": "#ffffff",
+      "bgAlpha": 0,
+      "canvasBgColor": "#ffffff",
+      "canvasBgAlpha": 0,
+      "baseFontColor": "#ffffff",
+      "baseFontSize": 13,
+      "theme": "carbon",
+      "xAxisNameFontColor": "#ffffff",
+      "xAxisNameFontSize": 13,
+      "xAxisNameFontBold": false,
+      "yAxisNameFontColor": "#ffffff",
+      "yAxisNameFontSize": 13,
+      "yAxisNameFontBold": false,
+      "palettecolors": "#007bff",
+      "plotToolText": "Consumption of $label - $value m3"
+    },
+    "data": [
+      { "label": "Mon", "value": null },
+      { "label": "Tue", "value": null },
+      { "label": "Wed", "value": null },
+      { "label": "Thu", "value": null },
+      { "label": "Fri", "value": null },
+      { "label": "Sat", "value": null },
+      { "label": "Sun", "value": null }
+    ]
+  }

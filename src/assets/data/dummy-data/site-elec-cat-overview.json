@@ -1,0 +1,147 @@
+{
+  "chart": {
+    "showvalues": "0",
+    "caption": "",
+    "subcaption": "",
+    "yaxisname": "Energy Consumption (kWh)",
+    "plottooltext": "Consumption of $seriesName in $label - $value kWh",
+    "palettecolors": "#11b72c, #2596f3, #caec14, #007bff",
+    "theme": "carbon",
+    "baseFont": "Poppins",
+    "bgColor": "#ffffff",
+    "bgAlpha": 0,
+    "canvasBaseColor": "#ffffff",
+    "canvasBaseDepth": 4,
+    "showCanvasBg": false,
+    "baseFontColor": "#ffffff",
+    "baseFontSize": 13,
+    "xAxisNameFontColor": "#ffffff",
+    "xAxisNameFontSize": 13,
+    "xAxisNameFontBold": false,
+    "yAxisNameFontColor": "#ffffff",
+    "yAxisNameFontSize": 13,
+    "yAxisNameFontBold": false,
+    "legendItemFontSize": 13,
+    "legendItemFontColor": "#ffffff",
+    "use3DLighting": 0
+  },
+  "categories": [
+    {
+      "category": [
+        {
+          "label": "Mar-2019"
+        },
+        {
+          "label": "Apr-2019"
+        },
+        {
+          "label": "May-2019"
+        },
+        {
+          "label": "Jun-2019"
+        },
+        {
+          "label": "Jul-2019"
+        },{
+          "label": "Aug-2019"
+        }
+      ]
+    }
+  ],
+  "dataset": [
+    {
+      "seriesname": "Academic",
+      "data": [
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        }
+      ]
+    },
+    {
+      "seriesname": "Staff Housing",
+      "data": [
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        }
+      ]
+    },
+    {
+      "seriesname": "Student Hall",
+      "data": [
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        }
+      ]
+    },
+    {
+      "seriesname": "Total Consumption",
+      "renderas": "Line",
+      "plottooltext": "Total Consumption of $label - $value kWh",
+      "data": [
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        },
+        {
+          "value": null
+        }
+      ]
+    }
+  ]
+}

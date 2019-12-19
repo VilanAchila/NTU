@@ -1,0 +1,51 @@
+[
+    {
+        "item": "Dashboard",
+        "url": "/overview",
+        "subMenus": []
+    },
+    {
+        "item": "Electrical",
+        "url": "/site-electrical",
+        "subMenus": []
+    },
+    {
+        "item": "Water",
+        "url": "/site-water",
+        "subMenus": []
+    },
+    {
+        "item": "Solar (PV)",
+        "url": "#",
+        "subMenus": []
+    },
+    {
+        "item": "Map Mode",
+        "url": "#",
+        "subMenus": [
+            {
+                "item": "Electrical",
+                "url": "/map/electricity/main-map"
+            },
+            {
+                "item": "Water",
+                "url": "/map/water/main-map"
+            }
+        ]
+    },
+    {
+        "item": "Chiller Plant",
+        "url": "/plant",
+        "subMenus": []
+    },
+    {
+        "item": "Report",
+        "url": "/reports",
+        "subMenus": []
+    },
+    {
+        "item": "Alerts",
+        "url": "/alerts",
+        "subMenus": []
+    }
+]

@@ -1,0 +1,41 @@
+@import 'src/scss/_variables.scss';
+
+.btn-close{
+    color: $color-font-secondary;
+    font-size: $size-font-primary;
+    margin-top: -1%;
+}
+
+.icon-close{
+    background-color: $bg-card;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+/* Important part */
+.chart-card-body{
+  overflow-y: initial !important
+}
+.chart-card-body{
+  height: 80vh;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #8d8d8d;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(29, 39, 46, 0.8);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(29, 39, 46);
+}

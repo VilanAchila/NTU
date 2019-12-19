@@ -1,0 +1,34 @@
+{
+  "chart": {
+    "caption": "",
+    "subcaption": "",
+    "showvalues": "1",
+    "showpercentintooltip": "0",
+    "numberSuffix": "%",
+    "enablemultislicing": "1",
+    "baseFont": "Poppins",
+    "bgColor": "#ffffff",
+    "bgAlpha": 0,
+    "canvasBgColor": "#ffffff",
+    "canvasBgAlpha": 0,
+    "baseFontColor": "#ffffff",
+    "theme": "carbon",
+    "palettecolors": "#11b72c, #007bff, #f44336, #e92151, #00967c, #b14c2a, #2596f3",
+    "pieYScale": 80,
+    "labelFontSize": 13
+  },
+  "data": [
+      {
+          "label": "Academic",
+          "value": "30"
+      },
+      {
+          "label": "Staff Housing",
+          "value": "50"
+      },
+      {
+          "label": "Student Hall",
+          "value": "20"
+      }
+  ]
+}

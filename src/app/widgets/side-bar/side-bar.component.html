@@ -1,0 +1,28 @@
+<div class="h-100 w-100 position-relative">
+  <div class="row">
+    <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 mt-2 d-xl-none">
+      <fa-icon class="browse fa-lg cursor-pointer" [icon]="backArrow"  (click)="toggleSideBar()"></fa-icon>
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pl-5 pr-5 pt-3 text-center">
+      <img src="/assets/img/logo.png"  class="img-fluid w-75" alt="Logo">
+      <p class="text-center">
+        <small>Azbil Singapore</small>
+      </p>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-12 col-lg-12 col-xl-12 pl-0 pr-0">
+      <ul class="menu top-level" *ngIf="menuItems.length > 0">
+        <li *ngFor="let item of menuItems">
+          <span class="pl-3 pt-2 pr-3 pb-2 d-block menu-item" (click)="toggleSideBar()" [routerLink]="item.url" [routerLinkActive]="'active'">{{ item.item }}</span>
+          <ul *ngIf="item.subMenus.length > 0">
+            <li *ngFor="let subItem of item.subMenus">
+              <span class="pl-5 pt-2 pr-3 pb-2 d-block menu-item" [routerLink]="subItem.url" (click)="toggleSideBar()" [routerLinkActive]="'active'">{{ subItem.item }}</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p class="text-center footer-version" (click)="openVersionModel()">Version 1.21.18</p>
+</div>

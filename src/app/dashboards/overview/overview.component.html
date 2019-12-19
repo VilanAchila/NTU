@@ -1,0 +1,136 @@
+<div class="card main-card-height ">
+  <div class="card-body h-100 card-scroll">
+
+    <div class="row">
+      <div class="col-md col-lg col-xl pl-1 pr-1 mt-2 ">
+        <div class="chart-card h-100">
+          <div class="chart-card-header">Change In Energy Consumption</div>
+          <div class="chart-card-body">
+            <div class="row">
+              <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 pt-4 pb-4 pl-4">
+                <app-trend3d *ngIf="elecChangeInConsumption" [dataSource]="elecChangeInConsumption"></app-trend3d>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 pt-4 pb-4">
+                <app-indicator *ngIf="elecChangeInConsumption" [newValue]="elecNewValue"
+                               [oldValue]="elecOldValue"
+                               [text]="'In Consumption'" [unit]="'kWh'"></app-indicator>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md col-lg col-xl pl-1 pr-1 mt-2">
+        <div class="chart-card">
+          <div class="chart-card-header">Change In Water Consumption</div>
+          <div class="chart-card-body">
+            <div class="row">
+              <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 pt-4 pb-4 ">
+                <app-trend3d *ngIf="waterChangeInConsumption" [dataSource]="waterChangeInConsumption"></app-trend3d>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 pt-4 pb-4 ">
+                <app-indicator *ngIf="waterChangeInConsumption" [newValue]="waterNewValue"
+                               [oldValue]="waterOldValue"
+                               [text]="'In Consumption'" [unit]="'m<sup>3</sup>'"></app-indicator>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-lg-3 col-xl-3 pl-1 pr-1 d-none d-xl-block mt-2">
+        <div class="chart-card h-100">
+          <div class="chart-card-header">Real-Time Consumption</div>
+          <div class="chart-card-body p-3">
+            <div class="row">
+              <div class="col-md-12 col-lg-12 col-xl-12">
+                <small>From {{ thisYearFirstRange.start | date:"MM/dd/yyyy" }}
+                  to {{ thisYearFirstRange.end.toString() | date:"MM/dd/yyyy" }}</small>
+                <br><br><br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="topic col-md-12 col-lg-12 col-xl-12 my-auto">
+                <p class="mb-2">Energy Consumption</p>
+                <!-- <span *ngIf="realTimeConsumptionElec" class="text-elec">{{ realTimeConsumptionElec.consumption | number }} <small>kWh <br></small></span> -->
+                <span class="text-elec">{{ realTimeConsumptionElec === null ? 'N/A' : realTimeConsumptionElec }}
+                  <span class="unit-size">{{ realTimeConsumptionElecUnit }} <br></span></span>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="topic col-md-12 col-lg-12 col-xl-12 p-3 my-auto">
+                <p class="mb-2">Water Consumption</p>
+                <!-- <span *ngIf="realTimeConsumptionWater" class="text-water">{{ realTimeConsumptionWater.consumption | number }} <small>m<sup>3</sup></small></span> -->
+                <span
+                  class="text-water">{{ realTimeConsumptionWater === null ? 'N/A' : realTimeConsumptionWater }}
+                  <span class="unit-size">m<sup>3</sup></span></span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-xl-none">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pl-1 pr-1 mt-2">
+        <div class="chart-card h-100">
+          <div class="chart-card-header">Real-Time Consumption |  <small>From {{ thisYearFirstRange.start | date:"MM/dd/yyyy" }}
+            to {{ thisYearFirstRange.end.toString() | date:"MM/dd/yyyy" }}</small></div>
+          <div class="chart-card-body p-3">
+            <div class="row">
+              <div class="topic col-sm-6 col-md-6 col-lg-6 col-xl-6 my-auto text-center column-seperator">
+                <p class="mb-2">Energy Consumption</p>
+                <!-- <span *ngIf="realTimeConsumptionElec" class="text-elec">{{ realTimeConsumptionElec.consumption | number }} <small>kWh <br></small></span> -->
+                <span class="text-elec">{{ realTimeConsumptionElec === null ? 'N/A' : realTimeConsumptionElec }}
+                  <span class="unit-size">{{ realTimeConsumptionElecUnit }} <br></span></span>
+
+              </div>
+              <div class="topic col-sm-6 col-md-6 col-lg-6 text-center col-xl-6 my-auto">
+                <p class="mb-2">Water Consumption</p>
+                <!-- <span *ngIf="realTimeConsumptionWater" class="text-water">{{ realTimeConsumptionWater.consumption | number }} <small>m<sup>3</sup></small></span> -->
+                <span
+                  class="text-water">{{ realTimeConsumptionWater === null ? 'N/A' : realTimeConsumptionWater }}
+                  <span class="unit-size">m<sup>3</sup></span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row ">
+      <div class="col-md-6 col-lg-6 col-xl-8 pl-1 pr-1 mt-2">
+        <div class="chart-card">
+          <div class="chart-card-header">Energy Consumption Summary - Last 6 Months</div>
+          <div class="chart-card-body">
+            <div class="row">
+              <div class="col-md-12 col-lg-12 col-xl-12 p-4">
+                <app-stackedcolumn3dline *ngIf="elecCategoryOverview" [dataSource]="elecCategoryOverview"></app-stackedcolumn3dline>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-4 pl-1 pr-1 mt-2">
+        <div class="chart-card h-100">
+          <div class="chart-card-header">This Year Consumptions - {{ today.getFullYear() }}</div>
+          <div class="chart-card-body">
+            <div class="row h-100">
+              <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 pt-4 pb-4 pl-1 pr-1">
+                <app-data-pointer [description]="'Total Energy<br> Consumption'" [pointerText]="realTimeConsumptionElec" [unit]="'kWh'"
+                                  type="kwh"></app-data-pointer>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 pl-1 pr-1 pt-4 pb-4">
+                <app-data-pointer [description]="'Total Water<br> Consumption'"
+                                  [pointerText]="realTimeConsumptionWater" [unit]="'m<sup>3</sup>'"
+                                  type="m3"></app-data-pointer>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,45 @@
+
+@import 'src/scss/_variables.scss';
+
+.pointer-container{
+    overflow: hidden;
+
+    .img-container{
+
+        .pointer-text{
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            top: 28%;
+            font-size: $size-font-pointer;
+        }
+
+        .pointer-unit{
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            top: 50%;
+            text-align: center;
+            font-size: $size-font-pointer-unit;
+        }
+
+        .pointer-img{
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  .mob-res {
+    width: 100%;
+  }
+}
+
+.pointer-min-height {
+  min-height: 200px;
+}
+
