@@ -1,0 +1,596 @@
+{
+  "site-consumption-mode": {
+    "caption": "",
+    "placeholder": "",
+    "subCaption": "",
+    "xAxisName": "Last Two Months",
+    "yAxisName": "Energy Consumption (kWh)",
+    "baseFont": "Poppins",
+    "bgColor": "#ffffff",
+    "bgAlpha": 0,
+    "loadMessage": "",
+    "canvasBaseColor": "#ffffff",
+    "canvasBaseDepth": 4,
+    "showCanvasBg": false,
+    "baseFontColor": "#ffffff",
+    "baseFontSize": 14,
+    "theme": "carbon",
+    "xAxisNameFontColor": "#ffffff",
+    "xAxisNameFontSize": 14,
+    "xAxisNameFontBold": false,
+    "yAxisNameFontColor": "#ffffff",
+    "yAxisNameFontSize": 14,
+    "yAxisNameFontBold": false,
+    "palettecolors": "#007bff",
+    "plotToolText": "<small>Month: $label<br />Consumption: $dataValueWh</small>",
+    "use3DLighting": 0
+  },
+  "water-change-in-consumption": {
+    "caption": "",
+    "placeholder": "",
+    "subCaption": "",
+    "xAxisName": "Last Two Months",
+    "yAxisName": "Water Consumption (m3)",
+    "baseFont": "Poppins",
+    "bgColor": "#ffffff",
+    "bgAlpha": 0,
+    "canvasBaseColor": "#ffffff",
+    "canvasBaseDepth": 4,
+    "showCanvasBg": false,
+    "baseFontColor": "#ffffff",
+    "baseFontSize": 14,
+    "theme": "carbon",
+    "xAxisNameFontColor": "#ffffff",
+    "xAxisNameFontSize": 14,
+    "xAxisNameFontBold": false,
+    "yAxisNameFontColor": "#ffffff",
+    "yAxisNameFontSize": 14,
+    "yAxisNameFontBold": false,
+    "palettecolors": "#007bff",
+    "plotToolText": "<small>Month: $label<br />Value: $dataValuem<sup>3</sup></small>",
+    "use3DLighting": 0
+  },
+  "site-elec-cat-overview": {
+    "showvalues": "0",
+    "caption": "",
+    "placeholder": "",
+    "loadMessage": "",
+    "subcaption": "",
+    "yaxisname": "Energy Consumption (kWh)",
+    "plottooltext": "<small>Category: $seriesName<br />Month: $label<br />Consumption: $dataValueWh</small>",
+    "palettecolors": "#11b72c, #2596f3, #caec14, #007bff",
+    "theme": "carbon",
+    "baseFont": "Poppins",
+    "bgColor": "#ffffff",
+    "bgAlpha": 0,
+    "canvasBaseColor": "#ffffff",
+    "canvasBaseDepth": 4,
+    "showCanvasBg": false,
+    "baseFontColor": "#ffffff",
+    "baseFontSize": 14,
+    "xAxisNameFontColor": "#ffffff",
+    "xAxisNameFontSize": 14,
+    "xAxisNameFontBold": false,
+    "yAxisNameFontColor": "#ffffff",
+    "yAxisNameFontSize": 14,
+    "yAxisNameFontBold": false,
+    "legendItemFontSize": 14,
+    "legendItemFontColor": "#ffffff",
+    "use3DLighting": 0
+  },
+  "elec-trend-log": {
+    "caption": "",
+    "placeholder": "",
+    "loadMessage": "",
+    "subCaption": "",
+    "xAxisName": "Days Of Week",
+    "yAxisName": "Energy Consumption (kWh)",
+    "baseFont": "Poppins",
+    "bgColor": "#ffffff",
+    "bgAlpha": 0,
+    "canvasBgColor": "#ffffff",
+    "canvasBgAlpha": 0,
+    "baseFontColor": "#ffffff",
+    "baseFontSize": 14,
+    "theme": "carbon",
+    "xAxisNameFontColor": "#ffffff",
+    "xAxisNameFontSize": 14,
+    "xAxisNameFontBold": false,
+    "yAxisNameFontColor": "#ffffff",
+    "yAxisNameFontSize": 14,
+    "yAxisNameFontBold": false,
+    "palettecolors": "#007bff",
+    "plotToolText": "Consumption of $label - $value kWh"
+  },
+  "profile-chart": {
+    "xaxisname": "Time of Day",
+    "placeholder": "",
+    "loadMessage": "",
+    "yaxisname": "Average Electricity Consumption(kWh)",
+    "labelDisplay": "rotate",
+    "theme": "carbon",
+    "baseFont": "Poppins",
+    "bgColor": "#ffffff",
+    "bgAlpha": "0",
+    "canvasBgColor": "#ffffff",
+    "canvasBgAlpha": "0",
+    "baseFontColor": "#ffffff",
+    "baseFontSize": "14",
+    "labelStep": "1",
+    "showValues": 0,
+    "xAxisNameFontColor": "#ffffff",
+    "xAxisNameFontSize": 14,
+    "xAxisNameFontBold": false,
+    "yAxisNameFontColor": "#ffffff",
+    "yAxisNameFontSize": 14,
+    "yAxisNameFontBold": false
+  },
+  "eq-distribution": {
+    "showvalues": "1",
+    "placeholder": "",
+    "loadMessage": "",
+    "showpercentintooltip": "0",
+    "numberSuffix": "",
+    "enablemultislicing": "1",
+    "baseFont": "Poppins",
+    "baseFontColor": "#ffffff",
+    "bgColor": "#ffffff",
+    "bgAlpha": 0,
+    "canvasBgColor": "#ffffff",
+    "canvasBgAlpha": 0,
+    "theme": "carbon",
+    "palettecolors": "#11992c, #007bef, #ff4336, #e92151, #05ce28, #ea8400, #c8ef00",
+    "pieYScale": 80,
+    "labelFontSize": 14,
+    "baseFontSize": 14
+  },
+  "profileChart": {
+    "xaxisname": "Time of Day",
+    "placeholder": "",
+    "loadMessage": "",
+    "yaxisname": "Average Electricity Consumption(kWh)",
+    "sYAxisName": "Benchmark Values (kWh)",
+    "labelDisplay": "rotate",
+    "theme": "carbon",
+    "baseFont": "Poppins",
+    "bgColor": "#ffffff",
+    "legendItemFont": "Arial",
+    "legendItemFontSize": "14",
+    "legendItemFontColor": "#FFFFFF",
+    "numVisiblePlot": "384",
+    "bgAlpha": "0",
+    "canvasBgColor": "#ffffff",
+    "canvasBgAlpha": "0",
+    "baseFontColor": "#ffffff",
+    "baseFontSize": "14",
+    "labelStep": "1",
+    "showValues": 0,
+    "xAxisNameFontColor": "#ffffff",
+    "xAxisNameFontSize": 14,
+    "sYAxisNameFontSize": 14,
+    "sYAxisNameFontBold": false,
+    "xAxisNameFontBold": false,
+    "yAxisNameFontColor": "#ffffff",
+    "yAxisNameFontSize": 14,
+    "yAxisNameFontBold": false
+  },
+  "eq-distribution-lg": {
+    "caption": "",
+    "placeholder": "",
+    "loadMessage": "",
+    "subcaption": "",
+    "showvalues": "1",
+    "showpercentintooltip": "0",
+    "numberSuffix": "",
+    "enablemultislicing": "1",
+    "baseFont": "Poppins",
+    "bgColor": "#ffffff",
+    "bgAlpha": 0,
+    "canvasBgColor": "#ffffff",
+    "canvasBgAlpha": 0,
+    "baseFontColor": "#ffffff",
+    "theme": "carbon",
+    "palettecolors": "#11992c, #007bef, #ff4336, #e92151, #05ce28, #ea8400, #c8ef00, #00bfef, #9b00ef, #d700ef",
+    "pieYScale": 80,
+    "labelFontSize": 14,
+    "labelFontColor": "#ffffff",
+    "showLegend": 1,
+    "legendItemFontSize": 14,
+    "legendPosition": "bottom",
+    "legendItemFontColor": "#ffffff",
+    "legendItem": "$label - $value% ($amount kWh)",
+    "legendAllowDrag": "1",
+    "baseFontSize": 14
+  },
+  "profileChartCategories":  [
+    {
+      "category": [
+        {
+          "label": "00:00"
+        },
+        {
+          "label": "00:30"
+        },
+        {
+          "label": "01:00"
+        },
+        {
+          "label": "01:30"
+        },
+        {
+          "label": "02:00"
+        },
+        {
+          "label": "02:30"
+        },
+        {
+          "label": "03:00"
+        },
+        {
+          "label": "03:30"
+        },
+        {
+          "label": "04:00"
+        },
+        {
+          "label": "04:30"
+        },
+        {
+          "label": "05:00"
+        },
+        {
+          "label": "05:30"
+        },
+        {
+          "label": "06:00"
+        },
+        {
+          "label": "06:30"
+        },
+        {
+          "label": "07:00"
+        },
+        {
+          "label": "07:30"
+        },
+        {
+          "label": "08:00"
+        },
+        {
+          "label": "08:30"
+        },
+        {
+          "label": "09:00"
+        },
+        {
+          "label": "09:30"
+        },
+        {
+          "label": "10:00"
+        },
+        {
+          "label": "10:30"
+        },
+        {
+          "label": "11:00"
+        },
+        {
+          "label": "11:30"
+        },
+        {
+          "label": "12:00"
+        },
+        {
+          "label": "12:30"
+        },
+        {
+          "label": "13:00"
+        },
+        {
+          "label": "13:30"
+        },
+        {
+          "label": "14:00"
+        },
+        {
+          "label": "14:30"
+        },
+        {
+          "label": "15:00"
+        },
+        {
+          "label": "15:30"
+        },
+        {
+          "label": "16:00"
+        },
+        {
+          "label": "16:30"
+        },
+        {
+          "label": "17:00"
+        },
+        {
+          "label": "17:30"
+        },
+        {
+          "label": "18:00"
+        },
+        {
+          "label": "18:30"
+        },
+        {
+          "label": "19:00"
+        },
+        {
+          "label": "19:30"
+        },
+        {
+          "label": "20:00"
+        },
+        {
+          "label": "20:30"
+        },
+        {
+          "label": "21:00"
+        },
+        {
+          "label": "21:30"
+        },
+        {
+          "label": "22:00"
+        },
+        {
+          "label": "22:30"
+        },
+        {
+          "label": "23:00"
+        },
+        {
+          "label": "23:30"
+        }
+      ]
+    }
+  ],
+  "profileChartData":[
+    {
+      "seriesname": "",
+      "color": "#4caf50",
+      "data": null
+    },
+    {
+      "seriesname": "",
+      "color": "#f44336",
+      "data": null
+    },
+    {
+      "seriesname": "",
+      "color": "#e91e63",
+      "data": null
+    },
+    {
+      "seriesname": "",
+      "color": "#9c27b0",
+      "data": null
+    },
+    {
+      "seriesname": "",
+      "color": "#3f51b5",
+      "data": null
+    },
+    {
+      "seriesname": "",
+      "color": "#2196f3",
+      "data": null
+    },
+    {
+      "seriesname": "",
+      "color": "#009688",
+      "data": null
+    },
+    {
+      "seriesname": "",
+      "color": "#B15928",
+      "data": null
+    }
+  ],
+  "profileChartData2":[
+    {
+      "seriesname": "",
+      "color": "#4caf50",
+      "data": null
+    },
+    {
+      "seriesname": "",
+      "color": "#f44336",
+      "data": null
+    },
+    {
+      "seriesname": "",
+      "color": "#e91e63",
+      "data": null
+    },
+    {
+      "seriesname": "",
+      "color": "#9c27b0",
+      "data": null
+    },
+    {
+      "seriesname": "",
+      "color": "#3f51b5",
+      "data": null
+    },
+    {
+      "seriesname": "",
+      "color": "#2196f3",
+      "data": null
+    },
+    {
+      "seriesname": "",
+      "color": "#009688",
+      "data": null
+    },
+    {
+      "seriesname": "",
+      "color": "#B15928",
+      "data": null
+    }
+  ],
+  "planatefficency":{
+    "numbersuffix": " kW/RT",
+    "placeholder": "",
+    "loadMessage": "",
+    "gaugefillmix": "{dark-40},{light+30},{dark-10},{dark-10}",
+    "baseFont": "Poppins",
+    "bgColor": "#ffffff",
+    "bgAlpha": 0,
+    "canvasBgColor": "#ffffff",
+    "canvasBgAlpha": 0,
+    "baseFontColor": "#ffffff",
+    "baseFontSize": 13,
+    "theme": "carbon",
+    "xAxisNameFontColor": "#ffffff",
+    "xAxisNameFontSize": 13,
+    "xAxisNameFontBold": false,
+    "majorTMColor": "#949292",
+    "majorTMThickness": 2,
+    "minorTMColor": "#ffffff"
+  },
+  "plantefficencyColorRange":{
+          "color": [
+      {
+        "minvalue": "0.4",
+        "maxvalue": "0.7",
+        "label": "Excellent",
+        "code": "#3399ff"
+      },
+      {
+        "minvalue": "0.7",
+        "maxvalue": "0.85",
+        "label": "Good",
+        "code": "#62B58F"
+      },
+      {
+        "minvalue": "0.85",
+        "maxvalue": "1.0",
+        "label": "Fair",
+        "code": "#FFC533"
+      },
+      {
+        "minvalue": "1.0",
+        "maxvalue": "1.2",
+        "label": "Need Improvements",
+        "code": "#F2726F"
+      }
+    ]
+  },
+  "plantHeatbalance":{
+    "numberSuffix": "%",
+    "placeholder": "",
+    "loadMessage": "",
+    "labelDisplay": "rotate",
+    "slantLabel": "0",
+    "showrealtimevalue": "0",
+    "plottooltext": "Average Heat Balance of $label ,  $dataValue",
+    "setadaptiveymin": "1",
+    "baseFont": "Poppins",
+    "bgColor": "#ffffff",
+    "bgAlpha": 0,
+    "canvasBgColor": "#ffffff",
+    "canvasBgAlpha": 0,
+    "baseFontColor": "#ffffff",
+    "baseFontSize": 14,
+    "palettecolors": "#007bef",
+    "theme": "carbon",
+    "xAxisNameFontColor": "#ffffff",
+    "xAxisNameFontSize": 14,
+    "xAxisNameFontBold": false,
+    "yAxisNameFontColor": "#ffffff",
+    "yAxisNameFontSize": 14,
+    "xAxisName": "Time",
+    "yAxisName": "Heat Balance",
+    "yAxisNameFontBold": false
+  },
+
+  "effecenctTrend":{
+      "yaxisname": "Efficiency(kW/RT)",
+      "placeholder": "",
+      "loadMessage": "",
+      "showhovereffect": "1",
+      "plottooltext": "Consumption at $label - $dataValue kW/RT",
+      "theme": "carbon",
+      "baseFont": "Poppins",
+      "baseFontColor": "#ffffff",
+      "baseFontSize": 14,
+      "bgColor": "#ffffff",
+      "bgAlpha": 0,
+      "canvasBgColor": "#ffffff",
+      "canvasBgAlpha": 0,
+      "palettecolors": "#11992c, #007bef, #ff4336, #e92151, #05ce28, #ea8400, #c8ef00",
+      "labelFontSize": 14,
+      "xAxisNameFontColor": "#ffffff",
+      "xAxisNameFontSize": 14,
+      "xAxisNameFontBold": false,
+      "yAxisNameFontColor": "#ffffff",
+      "yAxisNameFontSize": 14,
+      "xAxisName": "Dates",
+      "yAxisNameFontBold": false,
+      "legendItemFont": "Arial",
+      "legendItemFontSize": "15",
+      "legendItemFontColor": "#ffffff",
+      "showLegend": "0"
+  },
+  "effecenctTrendCat":{
+
+        "category": [
+          {
+              "label": "2019-08-30"
+          },
+          {
+            "label": "2019-08-31"
+          },
+          {
+            "label": "2019-09-01"
+          },
+          {
+            "label": "2019-09-02"
+          },
+          {
+            "label": "2019-09-03"
+          },
+          {
+            "label": "2019-09-04"
+          },
+          {
+            "label": "2019-09-05"
+          }
+        ]
+  },
+  "energyDist":{
+      "caption": "",
+      "placeholder": "",
+      "loadMessage": "",
+      "subcaption": "",
+      "baseFont": "Poppins",
+      "bgColor": "#ffffff",
+      "bgAlpha": 0,
+      "canvasBgColor": "#ffffff",
+      "canvasBgAlpha": 0,
+      "baseFontColor": "#ffffff",
+      "theme": "carbon",
+      "showPercentValues": "1",
+      "palettecolors": "#ff4336, #e92151, #05ce28, #ea8400, #c8ef00",
+      "labelFontSize": 14,
+      "labelFontColor": "#ffffff",
+      "showLegend": 1,
+      "legendItemFontSize": 14,
+      "baseFontSize": 14,
+      "legendItemFontColor": "#ffffff",
+      "legendAllowDrag": "0",
+      "defaultCenterLabel": "Loading..",
+      "centerLabel": "Energy consumption: $value",
+      "centerLabelColor": "#ffffff",
+      "centerLabelFontSize": 13
+  }
+}
+

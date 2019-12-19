@@ -1,0 +1,10 @@
+<div class="pointer-container pointer-min-height p-0">
+    <div class="img-container position-relative mt-3 pointer-min-height">
+        <img class="d-inline-block position-absolute h-100 pointer-img d-inline-block mob-res" src="assets/img/data-pointer.svg" alt="">
+        <!-- <span class="pointer-text position-absolute d-inline-block">{{ pointerText }}</span> -->
+        <img class="d-xl-none position-absolute h-100 pointer-img  mob-res" src="assets/img/data-pointer.svg" alt="">
+        <span class="pointer-text position-absolute d-inline-block">{{ pointerText===null? 'N/A': round(pointerText, 2)}}</span>
+        <span class="pointer-unit position-absolute d-inline-block" [innerHTML]="unit"></span>
+    </div>
+    <div class="text-center p-3" [innerHTML]="description"></div>
+</div>

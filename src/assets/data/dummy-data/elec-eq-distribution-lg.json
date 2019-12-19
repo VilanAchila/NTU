@@ -1,0 +1,57 @@
+{
+    "chart": {
+      "caption": "",
+      "subcaption": "",
+      "showvalues": "1",
+      "showpercentintooltip": "0",
+      "numberSuffix": "%",
+      "enablemultislicing": "1",
+      "baseFont": "Poppins",
+      "bgColor": "#ffffff",
+      "bgAlpha": 0,
+      "canvasBgColor": "#ffffff",
+      "canvasBgAlpha": 0,
+      "baseFontColor": "#ffffff",
+      "theme": "carbon",
+      "palettecolors": "#11992c, #007bef, #ff4336, #e92151, #05ce28, #ea8400, #c8ef00",
+      "pieYScale": 80,
+      "labelFontSize": 13,
+      "labelFontColor": "#ffffff",
+      "showLegend": 1,
+      "legendItemFontSize": 13,
+      "legendPosition": "right",
+      "legendItemFontColor": "#ffffff",
+      "legendItem": "$label - $value% ($amount kWh)",
+      "legendAllowDrag": "1"
+    },
+    "data": [
+        {
+            "label": "Air Distribution",
+            "value": "7"
+        },
+        {
+            "label": "Chiller Plant",
+            "value": "38"
+        },
+        {
+            "label": "Lighting",
+            "value": "26"
+        },
+        {
+            "label": "MV Fans",
+            "value": "4"
+        },
+        {
+            "label": "Receptacle",
+            "value": "21"
+        },
+        {
+            "label": "Fire",
+            "value": "9"
+        },
+        {
+            "label": "Domestic Water",
+            "value": "9"
+        }
+    ]
+}

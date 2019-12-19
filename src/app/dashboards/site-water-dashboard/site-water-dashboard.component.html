@@ -1,0 +1,104 @@
+<div class="card  main-card-height">
+        <div class="card-header p-0">
+          <div class="d-none d-xl-block">
+            <span class="d-inline-block pl-3 pt-3 pb-3 font-secondary">Water Dashboard</span>
+            <span class="tab-primary float-right font-primary" (click)="setTabIndex(1)" [ngClass]="{'active': tabIndex == 1}">Equipment Breakdown</span>
+            <span class="tab-primary float-right font-primary" (click)="setTabIndex(0)" [ngClass]="{'active': tabIndex == 0}">Overview</span>
+          </div>
+          <div class="form-group row mb-0 row d-xl-none">
+            <label class="col-6 col-sm-6 col-form-label">Water Dashboard</label>
+            <div class="col-6 col-sm-6 pl-0 pr-0">
+              <select (change)="setTabIndex($event.target.value)" [(ngModel)]="tabIndex" class="form-control mt-1 form-control-sm styled-select-box">
+                <option value="0">Overview</option>
+                <option value="1">Equipment Breakdown</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="card-body h-100 card-scroll">
+
+            <!-- tab index 0 -->
+            <section *ngIf="tabIndex == 0">
+            <div class="row ow-eq-height">
+                <div class="col-md-4 p-1">
+                <div class="chart-card h-100">
+                    <div class="chart-card-header card-header-max-height">
+                      <div class="d-flex justify-content-between">
+                        <p class="align-verticle-middle"> Overall Consumption</p>
+                        <date-range-picker class="d-none d-xl-block" position="bottom-right" [(dateRange)]="overollConsumptionRange" (dateRangeChange)="overollConsuptionChanged()"></date-range-picker>
+                      </div>
+                    </div>
+                    <div class="chart-card-body p-3">
+                    <div class="row h-100">
+                        <div class="col-md-12">
+                          <date-range-picker class="d-xl-none" [(dateRange)]="overollConsumptionRange" (dateRangeChange)="overollConsuptionChanged()"></date-range-picker>
+                          <app-data-pointer class="d-xl-none" [description]="'Total Consumption'" [pointerText]="overollConsumptionData"
+                                            [unit]="'m<sup>3</sup>'" class="" type="m3"></app-data-pointer>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-8 p-1">
+                <div class="chart-card h-100">
+                    <div class="chart-card-header">Today's Consumption - {{ today | date: 'd/MM/yyyy' }}</div>
+                    <div class="chart-card-body p-3">
+                    <app-trend *ngIf="dailyConsumptionData" [dataSource]="dailyConsumptionData"></app-trend>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="row ow-eq-height">
+                <div class="col-md-4 p-1">
+                <div class="chart-card h-100">
+                    <div class="chart-card-header card-header-max-height">
+                      <div class="d-flex justify-content-between">
+                        <p class="align-verticle-middle">Equipment Distribution</p>
+                        <date-range-picker class="d-none d-xl-block" (dateRangeChange)="equiDistributionChanged()"
+                                           [(dateRange)]="equipmentDistRange"
+                                           position="bottom-right"></date-range-picker>
+                      </div>
+                    </div>
+                    <div class="chart-card-body p-3 pie-chart-min-height">
+                      <date-range-picker class="d-xl-none" (dateRangeChange)="equiDistributionChanged()"
+                                         [(dateRange)]="equipmentDistRange"></date-range-picker>
+                      <app-pie *ngIf="equipDistribution" [dataSource]="equipDistribution"></app-pie>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-8 p-1">
+                <div class="chart-card h-100">
+                    <div class="chart-card-header">
+                    Consumption Summary
+                    <div class="btn-group ml-5 float-right d-none d-xl-block" role="group" aria-label="Trend Log Modes">
+                        <button class="btn btn-primary" [ngClass]="{'active': trendLogTabIndex == 0}" (click)="setTrendLogData(0)">Week</button>
+                        <button class="btn btn-primary" [ngClass]="{'active': trendLogTabIndex == 1}" (click)="setTrendLogData(1)">Month</button>
+                        <button class="btn btn-primary" [ngClass]="{'active': trendLogTabIndex == 2}" (click)="setTrendLogData(2)">Year</button>
+                        <button class="btn btn-primary" [ngClass]="{'active': trendLogTabIndex == 3}" (click)="setTrendLogData(3)">5 Years</button>
+                    </div>
+                    </div>
+                    <div class="chart-card-body p-3">
+                      <div class="btn-group row d-xl-none" role="group" aria-label="Trend Log Modes">
+                        <button class="btn btn-primary" [ngClass]="{'active': trendLogTabIndex == 0}" (click)="setTrendLogData(0)">Week</button>
+                        <button class="btn btn-primary" [ngClass]="{'active': trendLogTabIndex == 1}" (click)="setTrendLogData(1)">Month</button>
+                        <button class="btn btn-primary" [ngClass]="{'active': trendLogTabIndex == 2}" (click)="setTrendLogData(2)">Year</button>
+                        <button class="btn btn-primary" [ngClass]="{'active': trendLogTabIndex == 3}" (click)="setTrendLogData(3)">5 Years</button>
+                      </div>
+                      <app-trend *ngIf="trendLogData" [dataSource]="trendLogData"></app-trend>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <div class="row" *ngIf="tabIndex == 1">
+                <div class="col-md-12 col-lg-12 col-xl-12 pl-0 pr-0">
+                    <app-table *ngIf="equipBreakdown" [tableData]="equipBreakdown" unit="m<sup>3</sup>" type="0"></app-table>
+                    <div *ngIf="equipmertLoading" class="text-center">
+                      <img  alt="loader" class="loader-icon center" src="assets/img/loader.svg" />
+                    </div>
+                </div>
+            </div>
+            <div class="row pl-2 pr-2" *ngIf="tabIndex == 2">equipment-breakdown works!</div>
+            <div class="row pl-2 pr-2" *ngIf="tabIndex == 4"><app-reports></app-reports></div>
+        </div>
+        </div>

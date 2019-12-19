@@ -1,0 +1,6 @@
+<div class="chart-card">
+    <div>
+        <app-chart-container [isCompare]="true" serviceType="1" [dataSource]="dataSource" (dateChangeEvent)="dateChanged($event)" (compareChange)="compareChange($event)" ></app-chart-container>
+        <app-chart-container class="pt-6" *ngIf="compare" serviceType="1" [dataSource]="compareDataSource"  (dateChangeEvent)="dateChanged($event)" [isCompare]="false"></app-chart-container>
+    </div>
+</div>

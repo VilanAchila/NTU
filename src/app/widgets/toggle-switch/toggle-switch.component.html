@@ -1,0 +1,7 @@
+<div class="row">
+  <label class="label-text"><ng-content></ng-content></label>
+  <label class="switch">
+   <input [(ngModel)]="toggle" (change)="toggleChanged()" type="checkbox">
+  <span class="slider round"></span>
+  </label>
+</div>

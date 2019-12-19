@@ -1,0 +1,48 @@
+{
+    "chart": {
+      "showvalues": "1",
+      "showpercentintooltip": "0",
+      "numberSuffix": "%",
+      "enablemultislicing": "1",
+      "baseFont": "Poppins",
+      "baseFontColor": "#ffffff",
+      "bgColor": "#ffffff",
+      "bgAlpha": 0,
+      "canvasBgColor": "#ffffff",
+      "canvasBgAlpha": 0,
+      "theme": "carbon",
+      "palettecolors": "#11992c, #007bef, #ff4336, #e92151, #05ce28, #ea8400, #c8ef00",
+      "pieYScale": 80,
+      "labelFontSize": 13
+    },
+    "data": [
+        {
+            "label": "Air Distribution",
+            "value": null
+        },
+        {
+            "label": "Chiller Plant",
+            "value": null
+        },
+        {
+            "label": "Lighting",
+            "value": null
+        },
+        {
+            "label": "MV Fans",
+            "value": null
+        },
+        {
+            "label": "Receptacle",
+            "value": null
+        },
+        {
+            "label": "Fire",
+            "value": null
+        },
+        {
+            "label": "Domestic Water",
+            "value": null
+        }
+    ]
+}

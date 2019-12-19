@@ -1,0 +1,6 @@
+<div class="row fluid-margin">
+  <div class="col-md-12 p-3 header text-center">
+    <button class="d-inline-block clickable btn btn-primary mr-2 ml-2 float-left" (click)="toggleSideBar()"><fa-icon [icon]="homeIcon"></fa-icon></button>
+    <p [ngClass]="(isMobile())?'mobileHeader':'desktopHeader'" class="d-inline-block mb-0 mt-2">{{ selectedItem }} <fa-icon class="browse fa-lg ml-3" [icon]="editIcon" *ngIf="boardLevel != 2" (click)="open()"></fa-icon></p>
+  </div>
+</div>

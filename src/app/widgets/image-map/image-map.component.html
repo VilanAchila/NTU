@@ -1,0 +1,32 @@
+<div class="row h-100">
+  <div class="col-md-12 col-lg-12-col-xl-12">
+    <div class="card h-100" *ngIf="datasourse">
+      <div>
+        <div class="card-header">{{ title }}</div>
+      </div>
+
+      <div class="card-header-body card-scroll" (scroll) = "cardHide()">
+        <button (click)="backBtnClick()" *ngIf="building!=='main-map'" class="btn btn-primary btn-default back-btn"> Back
+        </button>
+        <div [@simpleFadeAnimation]="'in'" class="p-4 d-flex align-items-center justify-content-center" (ontouchmove)="onPnaImage($event)">
+          <img [alt]="datasourse.imageAlt" (load)="imageDimension($event)"  [src]="datasourse.imageUrl" id="mapImage" usemap="#image_map">
+          <svg [attr.height]="imageHeight" style="position:absolute;" [attr.width]="imageWidth">
+            <polygon (click)="onClicked($event)" (mouseout)="mouseOut($event)" (mouseover)="mouseEnter($event)"
+                     *ngFor="let coordinate of datasourse.map" [attr.alt]="coordinate.title"
+                     [attr.href]="coordinate.link" [attr.points]="coordinate.coords" data-id="{{ coordinate.building }}"
+                     style="fill:transparent;stroke:transparent;stroke-width:2;cursor: pointer"/>
+          </svg>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div #myDetailDiv class="triangle-pointer" >
+  <p class="card-text-position">{{ buildingName }}</p>
+  <p class="card-text-position" *ngIf="cardDetails">{{ cardDetails }} {{ unit }}</p><p class="card-text-position" *ngIf="!cardDetails">Loading...</p>
+</div>
+
+<div #myZoneDev class="triangle-pointer" >
+  <h4 class="card-text-position">{{ buildingName }}</h4>
+</div>

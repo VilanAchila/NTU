@@ -1,0 +1,17 @@
+<div class="wrapper d-flex w-100"  style="position: fixed; background-color: #1e1f21">
+  <nav *ngIf="!detectmob()" id="side-bar" [ngClass]="[isSideMenuActive ? 'active' : '']">
+    <app-side-bar></app-side-bar>
+  </nav>
+  <div class="content w-100">
+    <header>
+      <app-header></app-header>
+    </header>
+    <main class="p-2 fill-content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
+<nav *ngIf="detectmob()" id="side-bar" class="overlay-side-bar" [ngClass]="[isSideMenuActive ? 'active' : '']">
+  <app-side-bar></app-side-bar>
+</nav>
+<div [ngClass]="[isSideMenuActive && detectmob() ? 'show-overlay' : 'hide-overlay']" (click)="overlayClicked()"></div>
